@@ -3,60 +3,69 @@
 #--------------------------------------------------------------------------------------------
 # Camera Parameters. Adjust them!
 #--------------------------------------------------------------------------------------------
-File.version: "1.0"
-
-Camera.type: "Rectified"
+Camera.type: "PinHole"
 
 # Camera calibration and distortion parameters (OpenCV) 
-Camera1.fx: 718.856
-Camera1.fy: 718.856
-Camera1.cx: 607.1928
-Camera1.cy: 185.2157
+Camera.fx: 2382.8291549295145
+Camera.fy: 2382.8291549295145
+Camera.cx: 9.656223392132351e+02
+Camera.cy: 6.347309896850106e+02
 
-Camera.width: 1241
-Camera.height: 376
+Camera.k1: -0.20332934234174044
+Camera.k2: 0.21264687113855182
+Camera.p1: -0.00017662216068595817
+Camera.p2: -9.9773401018276401e-05
+
+Camera.bFishEye: 0
+
+Camera.width: 1936
+Camera.height: 1216
 
 # Camera frames per second 
-Camera.fps: 10
+Camera.fps: 10.0
 
-Stereo.b: 0.53716
+# stereo baseline times fx
+Camera.bf: 2.172964461604320e+03
 
 # Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
 Camera.RGB: 1
 
 # Close/Far threshold. Baseline times.
-Stereo.ThDepth: 35.0
+ThDepth: 35.0
 
 #--------------------------------------------------------------------------------------------
 # ORB Parameters
 #--------------------------------------------------------------------------------------------
 
 # ORB Extractor: Number of features per image
-ORBextractor.nFeatures: 2000
+ORBextractor.nFeatures: 10000
 
 # ORB Extractor: Scale factor between levels in the scale pyramid 	
 ORBextractor.scaleFactor: 1.2
 
 # ORB Extractor: Number of levels in the scale pyramid	
-ORBextractor.nLevels: 8
+ORBextractor.nLevels: 20
 
 # ORB Extractor: Fast threshold
 # Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
 # Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
 # You can lower these values if your images have low contrast			
-ORBextractor.iniThFAST: 20
+ORBextractor.iniThFAST: 12
 ORBextractor.minThFAST: 7
 
 #--------------------------------------------------------------------------------------------
 # Viewer Parameters
 #--------------------------------------------------------------------------------------------
 Viewer.KeyFrameSize: 0.6
-Viewer.KeyFrameLineWidth: 2.0
-Viewer.GraphLineWidth: 1.0
-Viewer.PointSize: 2.0
+Viewer.KeyFrameLineWidth: 2
+Viewer.GraphLineWidth: 1
+Viewer.PointSize: 2
 Viewer.CameraSize: 0.7
-Viewer.CameraLineWidth: 3.0
-Viewer.ViewpointX: 0.0
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
 Viewer.ViewpointY: -100
 Viewer.ViewpointZ: -0.1
-Viewer.ViewpointF: 2000.0
+Viewer.ViewpointF: 2000
+
+# ./Stereo/stereo_gia /home/siyuchen/lib/ORB_SLAM3/Vocabulary/ORBvoc.txt Stereo/GIA_1936_1216.yaml /home/siyuchen/20231019_Stereodata/20231019_142036/
+# ./Stereo/stereo_gia /home/siyuchen/lib/ORB_SLAM3/Vocabulary/ORBvoc.txt Stereo/GIA_1936_1216.yaml /home/siyuchen/Documents/20231024/20231024_123744/

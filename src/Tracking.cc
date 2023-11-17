@@ -1140,6 +1140,7 @@ bool Tracking::ParseCamParamFile(cv::FileStorage &fSettings)
             {
                 mbf *= mImageScale;
             }
+            std::cout << "- bf: " << mbf << std::endl;
         }
         else
         {

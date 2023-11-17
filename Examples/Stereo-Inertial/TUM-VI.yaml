@@ -111,3 +111,5 @@ Viewer.ViewpointX: 0.0
 Viewer.ViewpointY: -0.7
 Viewer.ViewpointZ: -3.5
 Viewer.ViewpointF: 500.0
+
+# ./Stereo-Inertial/stereo_inertial_tum_vi /home/siyuchen/lib/ORB_SLAM3/Vocabulary/ORBvoc.txt Stereo-Inertial/TUM-VI.yaml /home/siyuchen/lib/dataset/tum_vi/dataset-outdoors5_512_16/dso/cam0/images /home/siyuchen/lib/dataset/tum_vi/dataset-outdoors5_512_16/dso/cam1/images /home/siyuchen/lib/ORB_SLAM3/Examples/Stereo-Inertial/TUM_TimeStamps/dataset-outdoors5_512.txt /home/siyuchen/lib/ORB_SLAM3/Examples/Stereo-Inertial/TUM_IMU/dataset-outdoors5_512.txt

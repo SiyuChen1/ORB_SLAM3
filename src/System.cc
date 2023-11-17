@@ -234,6 +234,7 @@ System::System(const string &strVocFile, const string &strSettingsFile, const eS
         mpTracker->SetViewer(mpViewer);
         mpLoopCloser->mpViewer = mpViewer;
         mpViewer->both = mpFrameDrawer->both;
+        std::cout<<"whether display left and right images:" << mpViewer->both << std::endl;
     }
 
     // Fix verbosity
